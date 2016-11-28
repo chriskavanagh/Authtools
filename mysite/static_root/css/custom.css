@@ -1,0 +1,83 @@
+.jumbotron h1 {
+	color: #d35400;
+}
+
+#jumbotron {
+	margin-top: 60px;
+}
+
+.navbar-brand .glyphicon {
+	
+	margin-right: 6px;
+}
+
+.glyphicon {	
+	position: relative;
+	top: 3px;
+	display: inline-block;
+	font-family: 'Glyphicons Halflings';
+	font-style: normal;
+	font-weight: normal;
+	line-height: 3;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 170px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 170px;
+  
+}
+
+footer {
+	background: #333;
+	color: #d35400;
+	font-size: 11px;
+	padding: 20px	
+}
+
+ul.unstyled {
+	list-style: none;
+	padding: 0;
+}
+
+#copy {
+	position: relative;
+	top: 20px
+}
+
+#row {
+	color: #d35400;
+	margin: 30px;
+	
+}
+
+h3 {
+	position: relative
+	padding: 10px;
+}
+
+.tile {
+	background-color: #eff0f2;
+	padding: 14px;
+    position: relative;
+    text-align: center;
+}
+
+.tile > img {
+	padding: 15px;
+}

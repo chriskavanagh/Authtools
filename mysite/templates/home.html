@@ -1,0 +1,137 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="shopping, sushi,food, restaurant, eat, eating">
+    <link rel="icon" href="{% static 'img/favicon.ico' %}">
+
+  <title>Ben-Gui Sushi</title>
+
+    <!-- Bootstrap -->
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="https://getbootstrap.com/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="https://getbootstrap.com/examples/navbar-fixed-top/navbar-fixed-top.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="https://getbootstrap.com/assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- Loading Flat UI -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/flat-ui.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/custom.css' %}">
+
+</head>
+<body>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Ben-Gui Sushsi</a>
+          <i class="glyphicon glyphicon-cutlery"></i>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">          
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="../navbar/">Home</a></li>
+            <li><a href="../navbar-static-top/">About</a></li>
+            <li><a href="../navbar-static-top/">Contact</a></li>
+            <li class="active"><a href="./">Menu<span class="sr-only">(current)</span></a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <!-- Jumbotron Start -->
+    <div class="container">
+        <div class= "text-center jumbotron" id="jumbotron">
+          <h1>Ben-Gui Sushi!</h1>
+          <p class="lead"> Roanoke's Best Sushi Restaurant.</p>
+        </div>
+    </div>
+    <!-- Jumbotron End -->
+    <div class="row" id="row">
+        <div class="col-sm-2">
+            <div class="tile">
+            <img alt="Calendar" src="{% static 'img/calendar.svg' %}">
+            <h3 class="tile-title">Free for Share</h3>
+                <p>Roanoke's Best Sushi</p>
+            </div>
+        </div>
+    <div class="col-sm-2">
+            <div class="tile">
+            <img alt="Sushi" src="{% static 'img/sushi2.jpg' %}">
+            <h3 class="tile-title">Free for Share</h3>
+                <p>Roanoke's Best Sushi</p>
+            </div>
+        </div>
+    </div>
+
+    
+<!-- footer -->
+<footer class="footer">    
+    <div class="container">
+        <div class="row">
+
+            <div class="col-sm-2">
+                <p id="copy">Copyright &copy; Home-Office Development 2016</p>
+            </div><!-- end col-sm-2 -->
+
+            <div class="col-sm-4">
+                <h6>About Us</h6>
+                <p>Ben-Gui Sushi Is Located At
+                    4353 Starkey, Rd, Roanoke,
+                     VA 24018
+                    {{ request.get_host }}
+                    
+                </p>
+            </div><!-- end col-sm-4 -->
+            
+            <div class="col-sm-2">
+                <h6>Navigation</h6>
+                <ul class="unstyled">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div><!-- end col-sm-2 -->
+
+            <div class="col-sm-2">
+                <h6>Networking</h6>
+                <ul class="unstyled">
+                    <li><a href="#">Twitter</a><span class="fui-twitter"></li>
+                    <li><a href="#">Facebook</a><span class="fui-facebook"></span></li>
+                    <li><a href="#">Google Plus</a><span class="fui-google-plus"></span></li>
+                </ul>
+            </div><!-- end col-sm-2 --> 
+            
+        </div><!-- end row -->
+    </div><!-- end container -->
+</footer>
+    <!-- end footer -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
+    <!-- End Javascript -->
+
+</body>
+</html>

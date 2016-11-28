@@ -1,0 +1,2 @@
+python manage.py runserver --settings=mysite.settings.base
+python manage.py runserver --settings=mysite.settings.local
