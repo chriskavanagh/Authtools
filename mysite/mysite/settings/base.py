@@ -22,7 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-#SECRET_KEY = '1kg)s17o7ow5o9iclazbr914o4s9@i)-!tlv%-w3shl!k$kwli'
+
 SECRET_KEY = os.environ.get('AUTHTOOLS_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -90,10 +90,17 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'authtools',                                        # name of d.b. (in postgres).
+        'USER': 'postgres',                                         # name always postgres.
+        'PASSWORD': os.environ.get('AUTHTOOLS_POSTGRES_PASSWORD'),  # AUTHTOOLS_POSTGRES_PASSWORD
+        'HOST': 'localhost',                                        # always set to localhost on postgres.
+        'PORT': '',                                                 # Set to empty string for default on postgres.
+        'CONN_MAX_AGE': 600,                                        # number of seconds database connections should persist for
     }
 }
+
+#DATABASE_URL = postgres://postgres:alstar01@localhost:5432/authtools
 
 
 # Password validation
@@ -151,9 +158,9 @@ LOGIN_URL = reverse_lazy('login')
 LOGOUT_REDIRECT_URL = reverse_lazy('home')
 
 # Email Settings
-EMAIL_HOST = 'smtp.gmail.com' #os.environ.get('EMAIL_HOST')
-EMAIL_HOST_USER = 'ckava3@gmail.com' #os.environ.get('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = 'alstar41370' #os.environ.get('EMAIL_HOST_PASSWORD')
+EMAIL_HOST = os.environ.get('EMAIL_HOST')
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
